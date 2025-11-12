@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 5s   # How often to collect metrics
+
+scrape_configs:
+  - job_name: 'user_service'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['user_service:8001']
+
+  - job_name: 'book_service'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['book_service:8002']
+
+  - job_name: 'order_service'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['order_service:8003']

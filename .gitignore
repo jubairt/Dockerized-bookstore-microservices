@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Logs
+*.log
+book_service/logs/
+order_service/logs/
+user_service/logs/
+
+
+# Docker
+*.pid
+docker-compose.override.yml
