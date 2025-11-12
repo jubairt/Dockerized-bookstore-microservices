@@ -154,9 +154,16 @@ volumes:
   - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
 ```
 
-### **Access Prometheus**
-Visit:  
-👉 [http://localhost:9090](http://localhost:9090)
+## 🔌 Service Ports
+
+| Service        | Port (Host → Container) | Description                     |
+|----------------|------------------------|---------------------------------|
+| User Service   | 8001 → 8001            | Handles user management         |
+| Book Service   | 8002 → 8002            | Handles book records            |
+| Order Service  | 8003 → 8003            | Handles order management        |
+| PostgreSQL DB  | 5432 → 5432            | Main database container         |
+| Prometheus     | 9090 → 9090            | Monitoring all running services |
+
 
 ---
 
